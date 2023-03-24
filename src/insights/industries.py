@@ -6,7 +6,8 @@ def get_unique_industries(path: str) -> List[str]:
     jobs_dict = read(path)
     industries = set()
     for job in jobs_dict:
-        industries.add(job['industry'])
+        if len(job['industry']) > 0:
+            industries.add(job['industry'])
     return list(industries)
 
 
