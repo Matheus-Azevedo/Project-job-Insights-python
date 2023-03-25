@@ -1,5 +1,14 @@
-# from src.pre_built.counter import count_ocurrences
+from src.pre_built.counter import count_ocurrences
+
+
+mocked_path = 'data/jobs.csv'
+mocked_word = 'Design'
 
 
 def test_counter():
-    pass
+    # Arrange
+    expected = 3584
+    # Act
+    result = count_ocurrences(mocked_path, mocked_word)
+    # Assert
+    assert result == expected
